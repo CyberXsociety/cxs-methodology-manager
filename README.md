@@ -174,6 +174,3 @@ This is a fully offline, single-file web application for managing, editing, and 
 
 ---
 
-## Summary
-
-This app is a powerful, portable, and private knowledge base for bug bounty and hacking methodologies. It’s designed for speed, flexibility, and total offline use, with robust features for editing, searching, backup, and recovery. 
