@@ -4,7 +4,7 @@ A fully offline, single-file knowledge base for bug bounty and hacking methodolo
 
 ---
 
-[![Buy Now](https://img.shields.io/badge/Buy%20Now-Click%20Here-brightgreen?style=for-the-badge)](YOUR_PROJECT_LINK_HERE)
+[![Buy Now](https://img.shields.io/badge/Buy%20Now-Click%20Here-brightgreen?style=for-the-badge)](https://shop.cyberxsociety.com/product/cxs-methodology-manager/)
 
 
 
