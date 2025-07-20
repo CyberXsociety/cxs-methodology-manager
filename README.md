@@ -13,164 +13,195 @@ A fully offline, single-file knowledge base for bug bounty and hacking methodolo
 # Documentation
 
 
-## Overview
+# CXS Methodology Manager
 
-This is a fully offline, single-file web application for managing, editing, and backing up hacking/bug bounty methodologies. It is designed for bug hunters and hackers, with all data stored locally in your browser (no network required, no external dependencies).
+**CXS Methodology Manager** is an advanced, fully offline, single-file HTML/CSS/JS tool designed for bug hunters, hackers, and cybersecurity professionals to organize, manage, and execute hacking methodologies, commands, and notes. All data is automatically saved in your browser’s local storage—no external dependencies, no server, and no internet required.
 
 ---
 
 ## Features
 
-### 1. **Method List**
-- **Display:** Shows a list of all your methods, each with a title and one or more description/command pairs.
-- **Expand/Collapse:** Click a method’s title to expand/collapse its details.
-- **Edit:** Click the ✎ icon to edit a method’s title, descriptions, and commands.
-- **Add:** Use the + button to add a new method.
-- **Delete:** click two times on ✎ icon, a trash icon appears to delete the method (permanently or temporarily).
-- **Drag & Drop:** Reorder methods by dragging their headers.
+### 1. Method Management
+- **Add New Methods:**  
+  - Click the "+" button or use `Alt+N` to quickly add a new methodology.
+  - Each method can have a title, tags, and multiple description/command pairs.
+- **Edit Methods:**  
+  - Click the pencil (✎) icon to edit a method’s title, tags, descriptions, and commands.
+  - **Delete Icon Behavior:** Double-click the pen (edit) icon to reveal the delete (trash) icon. The delete icon will disappear if you click outside or anywhere else on the page.
+  - Inline editing with validation to prevent duplicate or empty titles.
+- **Delete Methods:**  
+  - When the delete icon is visible (after double-clicking the pen icon), click it to delete the method.
+  - Choose between permanent deletion or temporary (move to Recently Deleted).
 
-### 2. **Description & Command Pairs**
-- Each method can have multiple description/command pairs.
-- **Add Pair:** Use the small + button inside a method to add more pairs.
-- **Edit Pair:** When editing a method, you can edit the description and command.
-- **Copy Command:** Click the "Copy" button to copy a command to your clipboard.
+### 2. Description & Command Pairs
+- **Multiple Pairs per Method:**  
+  - Each method can have several description/command pairs (e.g., explanation + command).
+  - Add new pairs with the "+" button inside the method.
+- **Drag-and-Drop Reordering:**  
+  - Rearrange description/command pairs within a method using drag.
+  - Methods themselves can also be reordered via drag-and-drop.
 
-### 3. **Search**
-- **Open Search:** Click the magnifying glass or press `Ctrl+F`.
-- **Filter:** Search by method title, description text, or command.
-- **Highlight:** Matches are highlighted; use arrows to jump between them.
-- **Expand on Match:** Methods with matches auto-expand.
+### 3. Search & Filter
+- **Search Bar:**  
+  - Click the search icon or press `Ctrl+F` to open the search bar.
+  - Search by method title, description text, or command.
+  - Highlights all matches and allows navigation between them.
+- **Tag Filtering:**  
+  - Filter methods by tags using the dropdown at the top.
 
-### 4. **Backup & Restore**
-- **Backup:** Download all your methods as a JSON file.
-- **Restore:** Upload a backup JSON to restore/replace all methods.
-- **Warning:** Restoring will overwrite your current methods.
+### 4. Backup & Restore
+- **Backup:**  
+  - Download all your methods and commands as a JSON file for safekeeping.
+- **Restore:**  
+  - Restore from a backup file, either replacing or merging with current data.
+  - Preview backup contents before restoring.
 
-### 5. **Recently Deleted**
-- **Temporary Delete:** Temporarily delete methods; they go to the "Recently Deleted" bin.
-- **Restore:** Restore deleted methods from the bin.
-- **Permanent Delete:** Permanently remove methods from the bin.
-- **Delete All:** Remove all recently deleted methods at once.
+### 5. Recently Deleted
+- **Trash Bin:**  
+  - Temporarily deleted methods are moved to "Recently Deleted."
+  - Restore or permanently delete from the trash.
+  - Option to clear all recently deleted items.
 
-### 6. **Theme Switching**
-- **Cycle Theme:** Click the theme button to switch between Light, Dark, and Solarized themes.
-- **Persistence:** Your theme choice is saved in local storage.
+### 6. Theme Support
+- **Theme Cycling:**  
+  - Switch between Light, Dark, and Solarized themes with the theme button.
+  - Theme preference is saved in local storage.
 
-### 7. **Statistics**
-- Footer displays counts for:
-  - Total methods
-  - Total commands
-  - Recently deleted methods
+### 7. Statistics
+- **Footer Stats:**  
+  - Displays the number of methods, commands, and recently deleted items.
 
-### 8. **Accessibility & Responsiveness**
-- Fully keyboard accessible (tab, enter, escape, etc.).
-- Responsive design for mobile and desktop.
+### 8. Social & Sharing
+- **Social Bar:**  
+  - Quick links to the official website, Telegram, Twitter/X, and GitHub.
+- **Share Button:**  
+  - Share the project link via native share dialog or copy to clipboard.
 
 ---
 
-## How It Works
-
-### Data Storage
-
-- **Local Storage:** All methods, commands, and recently deleted items are saved in your browser’s local storage.
-- **No Server:** No data ever leaves your device.
+## Usage Guide
 
 ### Adding a Method
-
-1. Click the **+** button (top right).
-2. Enter a method name, description, and command.
-3. Click the ✔ (checkmark) to save.
-4. You can add more description/command pairs using the small + button inside the method.
+1. Click the "+" button at the top right or press `Alt+N`.
+2. Enter a method name, optional tags (comma-separated and you can set it only when you create new methods and can't edit next time), description, and command.
+3. Click the checkmark (✔) to save.
 
 ### Editing a Method
-
-1. Click the **✎** icon next to a method.
+1. Click the pencil (✎) icon next to a method.
 2. Edit the title, descriptions, or commands.
-3. Click ✔ to save changes.
+3. **To delete:** Double-click the pen icon to reveal the trash icon, then click the trash icon. The delete icon will disappear if you click outside the method.
+4. Click the checkmark (✔) to save changes.
 
 ### Deleting a Method
+- When the delete icon is visible (after double-clicking the pen icon), click it to delete the method.
+- Choose "Yes" for permanent deletion or "Temporary" to move to Recently Deleted.
 
-  - **Click 2 times ✎:** Click the ✎ icon 2 times trash/delete icon will show and if you dont want to delete so it will hide automatically when you click outside (anywhere).
-  - **Permanent:** Removes the method forever.
-  - **Temporary:** Moves the method to "Recently Deleted" (can be restored).
+### Adding Description/Command Pairs
+- While editing a method, click the "+" button inside the method to add more pairs.
 
-### Restoring a Method
+### Reordering
+- Drag the method header to reorder methods.
+- Drag description/command pairs within a method.
 
-1. Click the **Recently Deleted** button (footer).
-2. Click **Restore** next to a method to bring it back.
+### Search & Filter
+- Click the search icon or press `Ctrl+F` to search.
+- Use the dropdown to filter by method, text, or command.
+- Use the tag filter to show only methods with a specific tag.
 
 ### Backup & Restore
+- Click "Backup" in the footer to download your data.
+- Click "Restore" to import a backup (replace or merge).
 
-- **Backup:** Click **Backup** (footer), then **Download Backup** to save a JSON file.
-- **Restore:** Click **Restore** (footer), select a backup file, and confirm to replace all methods.
-
-### Search
-
-- Click the magnifying glass or press `Ctrl+F`.
-- Enter your search term.
-- Choose to search by method, text, or command.
-- Use the up/down arrows to jump between matches.
+### Recently Deleted
+- Click "Recently Deleted" in the footer to view, restore, or permanently delete items.
 
 ### Theme
-
-- Click the theme button (bottom of the page) to cycle through Light, Dark, and Solarized themes.
-
----
-
-## Developer Notes
-
-- **Single File:** All HTML, CSS, and JS are in one file for easy portability.
-- **No Dependencies:** No external libraries or frameworks.
-- **Offline:** Works without internet.
+- Click the theme button at the bottom to cycle through Light, Dark, and Solarized themes.
 
 ---
 
-## Keyboard Shortcuts
+## Data Storage
 
-- **Ctrl+F:** Open search bar.
-- **Escape:** Close search or clear search input.
-- **Alt+N:** Quick add a new method (unless editing or in an input).
-- **Arrow Up/Down:** Navigate between search matches.
-
----
-
-## Accessibility
-
-- All buttons and inputs are accessible via keyboard.
-- ARIA labels and roles are used for screen readers.
-- Responsive for all device sizes.
+- **All data is stored locally in your browser’s local storage.**
+- No data is sent to any server.
+- Works fully offline.
 
 ---
 
-## Troubleshooting
+## Accessibility & Shortcuts
 
-- **Data Loss:** If you clear your browser’s local storage, your methods will be lost unless you have a backup. (use separate browser for it like Microsoft edge if you dont use)
-- **Restore Overwrites:** Restoring a backup will replace all current methods.
-- **Browser Support:** Works in all modern browsers.
+- **Keyboard Shortcuts:**
+  - `Alt+N`: Quick add new method
+  - `Ctrl+F`: Open search bar
+  - `Escape`: Close search or clear search input
+  - `Arrow Up/Down`: Navigate search results
 
----
-
-## Customization
-
-- You can edit the HTML/CSS/JS directly in the file to add more features or change the look.
-- All logic is in the `<script>` tag at the bottom of the file.
+- **Accessible UI:**  
+  - All buttons and inputs are accessible via keyboard and have ARIA labels.
 
 ---
 
-## Example Use Case
+## Social & Project Links
 
-1. Add a method: "Find Directories of Target" with a description and a `gobuster` command.
-2. Add another method: "Enumerate Subdomains" with multiple description/command pairs.
-3. Use the search to quickly find "nmap" commands.
-4. Backup your methodology before clearing your browser or moving to another device.
-
----
-
-## Security & Privacy
-
-- **No network requests:** 100% offline.
-- **No analytics or tracking.**
-- **All data is local.**
+- [Official Website](https://cyberxsociety.com/)
+- [Telegram](https://t.me/CyberXsociety)
+- [Twitter/X](https://x.com/CyberXsociety)
+- [GitHub Documentary](https://github.com/CyberXsociety/cxs-methodology-manager)
+- [Share this project](https://shop.cyberxsociety.com/product/cxs-methodology-manager/)
 
 ---
 
+## Technical Notes
+
+- **Single-file HTML/CSS/JS:**  
+  - No external libraries or dependencies.
+  - All logic, styles, and UI are contained in one file.
+- **Manual Drag-and-Drop:**  
+  - Custom drag-and-drop for both methods and description/command pairs.
+- **No External Storage:**  
+  - 100% offline, privacy-respecting.
+
+---
+
+## Tips & Warnings
+
+- **Tips:**
+  - Regularly use the Backup feature to save your data externally, especially before clearing browser data or switching devices.
+  - Use tags to organize and quickly filter your methodologies.
+  - Use the search and tag filter to quickly find specific methods or commands.
+  - Make use of keyboard shortcuts for faster workflow.
+
+- **Warnings:**
+  - **Do NOT clear your browser’s local storage unless you have backed up your data.** All methods and commands will be lost.
+  - **Do NOT use this tool for storing sensitive credentials or secrets.** While data is local, browsers are not designed for high-security storage.
+  - **Do NOT open the file in multiple tabs and edit simultaneously.** This may cause data loss or overwrite issues.
+  - **Do NOT rely solely on browser storage for long-term retention.** Always keep external backups.
+  - **Do NOT share your backup file with others unless you are sure it contains no sensitive information.**
+
+---
+
+## Ideal Use Cases
+
+- Bug bounty hunters and penetration testers organizing attack methodologies.
+- Red teamers and security researchers managing reusable command snippets.
+- Anyone needing a portable, offline, and private methodology/command manager.
+
+---
+
+## FAQ
+
+**Q: Is my data safe?**  
+A: Yes, all data is stored locally in your browser. No data leaves your device.
+
+**Q: Can I use this offline?**  
+A: Absolutely! The tool is designed to work fully offline.
+
+**Q: Can I import/export my data?**  
+A: Yes, use the Backup and Restore features in the footer.
+
+**Q: How do I reorder items?**  
+A: Drag the method header to reorder methods, or the ≡ handle to reorder description/command pairs.
+
+---
+
+If you need further help or want to contribute, visit the [GitHub Documentary](https://github.com/CyberXsociety/cxs-methodology-manager). 
