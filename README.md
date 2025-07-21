@@ -123,6 +123,16 @@ A fully offline, single-file knowledge base for bug bounty and hacking methodolo
 ### Backup & Restore
 - Click "Backup" in the footer to download your data.
 - Click "Restore" to import a backup (replace or merge).
+  - A sample file called "bonus-backup.json" is included with this project. It contains extra ready-made methodologies and commands to help you get started or expand your collection.
+  - To use the bonus backup or any backup file:
+    1. Click the "Restore" button (📂) in the footer.
+    2. Click "Choose Backup File" and select "bonus-backup.json" (or any other backup file).
+    3. You will see a preview of the backup contents.
+    4. Choose one of the following options:
+       - **Replace:** This will completely overwrite your current methods with the methods from the backup file. Use this if you want to start fresh or restore a previous state.
+       - **Merge:** This will add any new methods from the backup file to your current list, without removing your existing methods. If a method with the same name exists, only new commands or tags will be added. Use this to combine your data with the bonus backup or another backup file.
+    5. Confirm your choice. Your methods will be updated accordingly.
+
 
 ### Recently Deleted
 - Click "Recently Deleted" in the footer to view, restore, or permanently delete items.
@@ -217,6 +227,9 @@ A: Absolutely! The tool is designed to work fully offline.
 
 **Q: Can I import/export my data?**  
 A: Yes, use the Backup and Restore features in the footer.
+
+**Q: What is bonus-backup.json and how do I use it?**  
+A: The bonus-backup.json file is included with this project and contains extra ready-made methodologies and commands. To use it, click the Restore button, select bonus-backup.json, and choose either Replace (to overwrite your current methods) or Merge (to add the bonus methods to your existing list).
 
 **Q: How do I reorder items?**  
 A: Drag the method header to reorder methods, or the ≡ handle to reorder description/command pairs.
